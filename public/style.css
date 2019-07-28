@@ -1,0 +1,11 @@
+.icons{
+    font-size: 500%; 
+    color: red; 
+}
+.attended{
+    color: green; 
+}
+.button{
+    background : none;
+    outline : none;
+}

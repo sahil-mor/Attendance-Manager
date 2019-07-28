@@ -1,0 +1,52 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/signup.css">
+
+</head>
+
+<body>
+    <form id="myForm" action="/signup" method="POST">
+      <div class="form-group">
+          <div>
+              <% var url = "user.jpg" %>
+              <img src="<%= url%>">
+          </div>
+          
+          <h2 id="login">REGISTER</h2>
+          <div class="message">
+                <% if(validity == 0) {  %> 
+                <h2> <%=  Message   %>  </h2>
+                <%  }  %>
+            </div>
+          
+          <i class="fa fa-at"></i>
+          <input type="email" id="exampleInputEmail1" placeholder="Email" name="email" required>
+          <h1></h1>
+          
+          <i class="fa fa-user-plus"></i>
+          <input type="text" id="user" placeholder="Username" name="username" required>
+          <h1></h1>
+
+          <div class="passwords">
+              <i class="fa fa-lock"></i>
+              <input type="password" class="exampleInputPassword1" placeholder="Password" name="password" pattern=".{5,10}" title="Password must be between 5 and 10 characters" required >
+              <span class="password1">
+                   <i class="fa fa-eye password" aria-hidden="true"></i> 
+                   <i class="fa fa-eye-slash slashes firstIcon" aria-hidden="true"></i>
+                </span> 
+              <h1></h1>
+
+              <i class="fa fa-check-double"></i>
+              <input type="password"  id="ConfirmPassword" placeholder="Confirm Password" name="confirmPassword" required>
+              <span class="password2">
+                    <i class="fa fa-eye confirmPassword" aria-hidden="true"></i> 
+                    <i class="fa fa-eye-slash slashes secondIcon" aria-hidden="true"></i>
+            </span>
+             </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+
+<% include partials/footer %>
+<script src="/passwordHideShow.js"></script>
+</body>
+</html>

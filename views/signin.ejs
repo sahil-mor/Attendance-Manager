@@ -1,0 +1,40 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/signin.css">
+
+</head>
+<body>
+    <form method="POST" action="/signin">
+        <div>
+            <% var url = "user.jpg" %>
+            <img src=<%=url%>>
+        </div>
+        <div id="login">Login Here</div>
+        <div class="message">
+            <% if(validity == 0){ %>
+                <h2><%= Message %></h2>
+            <% } %>
+        </div>
+        <input type="text" class="form-group form-control" id="user" name="username" placeholder="Enter Username" required>
+        <h3></h3>
+
+        <span class="password1">
+                <i class="fa fa-eye password" aria-hidden="true"></i> 
+                <i class="fa fa-eye-slash slashes firstIcon" aria-hidden="true"></i>
+            </span> 
+        <input id="pass" type="password" class="form-group form-control exampleInputPassword1" name="password" placeholder="Enter Password" required pattern=".{5,10}" title="Password must be between 5 and 10 characters">
+        
+        <h3></h3>
+
+        <button class="btn btn-danger">Log In</button>
+        <h4></h4>
+
+        <a href="">Lost Your Password?</a>
+        <h4></h4>
+
+        <a href="/signup">Don't Have Account?</a>
+    </form>
+
+<% include partials/footer %>
+<script src="/passwordHideShow.js"></script>
+</body>
+</html>

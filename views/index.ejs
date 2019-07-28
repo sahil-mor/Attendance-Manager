@@ -1,0 +1,74 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/index.css">
+			
+	<h1 class="heading">GOAL - <em><%= User["goal"]  %></em>  </h1>
+    <div class="initial progress-circle p<%= User['goal'] %>">
+            <span><%= User['goal'] %>%  </span>
+            <div class="left-half-clipper">
+               <div class="first50-bar"></div>
+               <div class="value-bar"></div>
+            </div>
+         </div> 
+        <div>
+		<% var i = 0; %>
+		<% User["subjects"].forEach(function(subject){ %>
+			<% i++; %>
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<h2><em> <a href="/user/<%= User['_id'] %>/subjectInfo/<%= subject['_id'] %>"><%= subject["name"] %> </a> </em></h2>
+							<% if(subject["lecture"] ===  "true"){ %>
+								<% if(subject["totalLecture"] === 0){ %>
+									<h3>Lecture % : 0</h3>
+								<% } else{ %>
+									<h3>Lecture % :  <%= (subject["attendedLecture"]/subject["totalLecture"] * 100).toFixed(0) %> </h3>
+								<% } %>
+								<% } else{ %>
+								<h3>No Lectures</h3>
+							<% } %>
+							
+							<% if(subject["tutorial"] === "true"){ %>
+								<% if(subject["totalTut"] === 0){ %>
+									<h3>Tut % : 0</h3>
+								<% } else{ %>
+									<h3>Tut % :  <%= (subject["attendedTut"]/subject["totalTut"] * 100).toFixed(0) %> </h3>
+								<% } %>
+								<% } else{ %>
+								<h3>No Tuts</h3>
+							<% } %>
+							
+							<% if(subject["lab"] === "true"){ %>
+								<% if(subject["totalLab"] === 0 ){ %>
+									<h3>Lab % : 0</h3>
+								<% } else{ %>
+									<h3>Lab % : <%= (subject["attendedLab"]/subject["totalLab"] * 100).toFixed(0) %> </h3>
+								<% } %>
+								<% } else{ %>
+								<h3>No Labs</h3>
+							<% } %>
+							<% if(subject["overall"] == 0){ %>
+								<% var overallP = 0; %>
+							<% } else{ %>
+								<h4>Overall Attended : <em class="attended<%=i%>">  <%= subject["overallAttended"] %> </em> </h4>
+								<h4>Overall Classes : <em class="total<%=i%>"> <%= subject["overall"] %>  </em>  </h4>
+								<% var overallP = (subject["overallAttended"]/subject["overall"] * 100).toFixed(0)  %>	
+							<% } %>
+							<h3 >Overall % : <em id="<%= i %>"> <%= overallP  %>  </em> </h3>
+							<div class="<%= i %> indivs progress-circle p<%= overallP %>">
+								<span id="0<%= i %>"> <%= overallP %>  </span>
+								<div class="left-half-clipper">
+								   <div id="2<%= i %>" class="first50-bar"></div>
+								   <div id="1<%= i  %>" class="value-bar"></div>
+								</div>
+							 </div>  
+							<div class="note<%= i %>"></div>
+							<a class="btn btn-danger" href="/user/<%= User['_id'] %>/deleteSubject/<%= subject['_id'] %> %>">Delete Subject</a>
+						</div>
+					</div>
+			</div>
+		<% }) %>        	
+		</div>
+<script src="index.js">
+        
+</script>
+</body>
+</html>

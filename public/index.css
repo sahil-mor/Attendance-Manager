@@ -1,0 +1,30 @@
+.heading{
+    margin-left: 30%;
+    margin-top: 2%;
+    float: left;
+}
+.initial{
+    margin-left: 23%;
+}
+.thumbnail{
+    text-align: center;
+    height: 520px;
+    margin-left: 4%;
+    margin-right: 4%;
+    background : khaki;
+}
+.indivs{
+    margin-left: 40%;
+}
+h2 em a{
+    text-decoration: underline;
+}
+.btn,.btn-danger{
+    margin-top: 2%;
+}
+h1{
+    color: #337ab7;
+}
+h1 em{
+    color : #f0ad4e;
+}

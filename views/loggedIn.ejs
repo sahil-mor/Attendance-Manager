@@ -1,0 +1,18 @@
+<% include partials/header %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.css">
+<link rel="stylesheet" href="/goal.css">
+<div class="ui form">
+        <div class="fields" id="form">
+            <form  class="form-inline" action="/settingGoal/<%= id %>?_method=PATCH" method="POST">
+                <div class="field">
+                    <input type="number" placeholder="ENTER YOUR GOAL" required name="goal">
+                    <button type="submit" class="btn btn-primary mb-2">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<% include partials/footer %>
+</body>
+</html>

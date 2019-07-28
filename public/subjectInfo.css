@@ -1,0 +1,21 @@
+em strong{
+    font-family: cursive;
+    color: brown;
+    text-decoration: underline;
+}
+#name{
+    margin-left: 35%;
+    color: darkgoldenrod;
+}
+.thumbnail{
+    height: 30em;
+    background: khaki;
+    text-align: center;
+}
+img{
+    border-radius: 100%;
+    margin-top: 10%;
+}
+.progress-circle{
+    margin-left: 40%;
+}

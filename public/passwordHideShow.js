@@ -1,0 +1,21 @@
+$(".slashes").hide();
+        $(".password").click(function(){
+            $(".exampleInputPassword1").attr("type","text")
+            $(this).hide();
+            $(".firstIcon").show()
+        })
+        $(".firstIcon").click(function(){
+            $(".exampleInputPassword1").attr("type","password")
+            $(this).hide();
+            $(".password").show()
+        })
+        $(".confirmPassword").click(function(){
+            $("#ConfirmPassword").attr("type","text")
+            $(this).hide();
+            $(".secondIcon").show()
+        })
+        $(".secondIcon").click(function(){
+            $("#confirmPassword").attr("type","password")
+            $(this).hide()
+            $(".confirmPassword").show()
+})

@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+    margin: auto auto;
+    background: url(https://previews.123rf.com/images/klenova/klenova1509/klenova150900010/44932248-old-coffee-cup-and-mill-on-dark-rustic-background.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    font-family: sans-serif;
+}
+html{
+    height: 100%;
+}
+
+.message{
+    color: rgba(186, 34, 14, .9);
+    margin-top: 10px;   
+}
+
+form{
+    background : black;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    position: relative;
+    margin-top: 8%;
+    height: 60%;
+    display: inline-block;
+}
+
+img{
+    border-radius: 85%;
+    margin-top: -18%;
+}
+
+.form-control{
+    width: 35%;
+    margin: 0 auto;
+}
+
+input::placeholder{
+    color:rgb(149, 244, 66); 
+}
+
+#login{
+    font-size: 20px;
+    margin-bottom: 5%; 
+    margin-top: 2%;
+}
+
+label{
+    color: white;
+}
+
+.btn-danger{
+    width: 25%;
+    background: red;
+    border-radius: 35%;
+}
+
+a{
+    color:grey;
+    margin-top: 0;
+}
+input,#pass,#user{
+    background: none;
+    overflow: hidden;
+    /* padding: 8px 0;
+    margin: 8px 0; */
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4caf50;
+    color:rgb(149, 244, 66);
+    width: 70%;
+  }

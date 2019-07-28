@@ -1,0 +1,35 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjLffYm5Uw9Yzt6vsB3j4ByBD_1wyoOFWn0jvEJNF1MAJH_pZi");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    }
+input[type=text]{
+    width: 50%;
+    margin-left: 25%;
+}
+.jumbotron{
+    width: 50%;
+    margin-top: 17%;
+    margin-left: 25%;
+    text-align: center;
+}
+.lables{
+    margin-left: 10%;
+    margin-right: 1.5%;
+}
+.lab{
+    margin-left: 12%;
+}
+label[for='lab']{
+    margin-left: 1%;
+    margin-right: 3%;
+}
+.btn{
+    width: 50%;
+    margin-top: 3%;
+}  

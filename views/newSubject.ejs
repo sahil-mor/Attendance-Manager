@@ -1,0 +1,27 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/newSubject.css">
+    <div class="jumbotron">
+            <h2><em><%= Message  %></em></h2>
+            <form action="/addSubject/?_method=PATCH" method="POST">
+                <div class="form-group">
+                    <label for="inputPassword2" class="sr-only">SUBJECT NAME</label>
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="SUBJECT NAME" name="name" required>    
+                </div>
+                <div class="radioButtons">
+                    <label for="">LECTURES : </label> 
+                        <label class="lables" for="">YES</label><input type="radio" value="true" name="lecture" required>
+                        <label class="lables" for="">NO</label><input type="radio" value="false" name="lecture" required> <br>
+                    <label for="">TUTORIAL : </label>
+                        <label class="lables" for="">YES</label><input type="radio" value="true" name="tut" required> 
+                        <label class="lables" for="">NO</label><input type="radio" name="tut" value="false" required> <br>
+                    <label for="lab">LAB : </label>
+                        <label class="lables lab" for="">YES</label><input type="radio" name="lab" value="true" required>
+                        <label class="lables" for="">NO</label> <input type="radio" name="lab" value="false" required> <br>
+                </div>
+                <button type="submit" class="btn btn-success">SUBMIT</button> 
+            </form>
+    </div>
+    
+<% include partials/footer %>
+</body>
+</html>
