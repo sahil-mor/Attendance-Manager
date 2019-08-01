@@ -11,8 +11,8 @@ function LabMissed(req,res){
         if(error){
             res.send(error)
         }else{
-            foundSubject["totalLab"] += 1;
-            foundSubject["overall"] +=1;
+            foundSubject["totalLab"] += 2;
+            foundSubject["overall"] +=2;
             foundSubject.save(function(error,updatedSubject){
                 if(error){
                     res.send(error)
