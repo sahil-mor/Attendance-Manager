@@ -11,10 +11,10 @@ function LabAttended(req,res){
         if(error){
             res.send(error)
         }else{
-            foundSubject["attendedLab"] += 1;
-            foundSubject["totalLab"] += 1;
-            foundSubject["overallAttended"] +=1;
-            foundSubject["overall"] +=1;
+            foundSubject["attendedLab"] += 2;
+            foundSubject["totalLab"] += 2;
+            foundSubject["overallAttended"] +=2;
+            foundSubject["overall"] +=2;
             foundSubject.save(function(error,updatedSubject){
                 if(error){
                     res.send(error)
